@@ -3,12 +3,13 @@ theme = Dracula
 background-opacity = 0.8
 window-height = 35
 window-width = 145
+gtk-titlebar = false
 
 command = zsh
 clipboard-read = allow
 clipboard-write = allow
 copy-on-select = true
-font-size = 15
+font-size = 13
 font-thicken = true
 font-family = "JetBrainsMono Nerd Font Mono"
 

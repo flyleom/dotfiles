@@ -1,6 +1,6 @@
 
 
-output HDMI-A-1 scale 2
+output HDMI-A-1 scale 1.5
 
 # Default config for sway
 #
@@ -25,7 +25,8 @@ set $menu wmenu-run
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /home/mng/repo/wallpaper/3840x2160/wallhaven-3ldq2v_3840x2160.png fill
+# output * bg /home/mng/repo/wallpaper/3840x2160/wallhaven-3ldq2v_3840x2160.png fill
+output * bg /home/mng/repo/wallpaper/1920×1080/wallhaven-jxglrp_1920x1080.png fill
 #output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 #
 # Example configuration:

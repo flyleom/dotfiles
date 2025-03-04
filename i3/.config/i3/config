@@ -9,7 +9,8 @@
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
-set $mod Mod4
+# set $mod Mod4
+set $mod Mod1
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -50,16 +51,18 @@ tiling_drag modifier titlebar
 
 # start a terminal
 # bindsym $mod+Return exec i3-sensible-terminal
-bindsym $mod+Return exec ghostty
+bindsym $mod+Return exec kitty
 
 # kill focused window
 bindsym $mod+Shift+q kill
 
 # Autostart 
-exec_always --no-startup-id xrandr --output HDMI-1 --mode 3840x2160
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+# exec_always --no-startup-id xrandr --output HDMI-1 --mode 3840x2160
+exec_always --no-startup-id xrandr --output HDMI-1 --mode 1920x1080
+# exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec --no-startup-id picom
-exec --no-startup-id feh --bg-scale $HOME/repo/wallpaper/3840x2160/wallhaven-p96odm_3840x2160.png
+# exec --no-startup-id feh --bg-scale $HOME/repo/wallpaper/3840x2160/wallhaven-p96odm_3840x2160.png
+exec --no-startup-id feh --bg-scale $HOME/repo/wallpaper/1920×1080/wallhaven-l8vp7y_1920x1080.png
 
 
 # start dmenu (a program launcher)
@@ -72,31 +75,37 @@ bindsym $mod+d exec --no-startup-id rofi -show run
 # bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
 
 # change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+semicolon focus right
-
+# bindsym $mod+j focus left
+# bindsym $mod+k focus down
+# bindsym $mod+l focus up
+# bindsym $mod+semicolon focus right
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
 # alternatively, you can use the cursor keys:
-bindsym $mod+Left focus left
-bindsym $mod+Down focus down
-bindsym $mod+Up focus up
-bindsym $mod+Right focus right
+# bindsym $mod+Left focus left
+# bindsym $mod+Down focus down
+# bindsym $mod+Up focus up
+# bindsym $mod+Right focus right
 
 # move focused window
-bindsym $mod+Shift+j move left
-bindsym $mod+Shift+k move down
-bindsym $mod+Shift+l move up
-bindsym $mod+Shift+semicolon move right
-
+# bindsym $mod+Shift+j move left
+# bindsym $mod+Shift+k move down
+# bindsym $mod+Shift+l move up
+# bindsym $mod+Shift+semicolon move right
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
 # alternatively, you can use the cursor keys:
-bindsym $mod+Shift+Left move left
-bindsym $mod+Shift+Down move down
-bindsym $mod+Shift+Up move up
-bindsym $mod+Shift+Right move right
+# bindsym $mod+Shift+Left move left
+# bindsym $mod+Shift+Down move down
+# bindsym $mod+Shift+Up move up
+# bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $mod+h split h
+bindsym $mod+n split h
 
 # split in vertical orientation
 bindsym $mod+v split v
@@ -123,16 +132,16 @@ bindsym $mod+a focus parent
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "1"
-set $ws2 "2"
-set $ws3 "3"
-set $ws4 "4"
-set $ws5 "5"
-set $ws6 "6"
-set $ws7 "7"
-set $ws8 "8"
-set $ws9 "9"
-set $ws10 "10"
+set $ws1 "1:one"
+set $ws2 "2:two"
+set $ws3 "3:three"
+set $ws4 "4:four"
+set $ws5 "5:five"
+set $ws6 "6:six"
+set $ws7 "7:seven"
+set $ws8 "8:eight"
+set $ws9 "9:nine"
+set $ws10 "10:ten"
 
 # switch to workspace
 bindsym $mod+1 workspace number $ws1
@@ -190,10 +199,34 @@ mode "resize" {
         bindsym $mod+r mode "default"
 }
 
+default_border pixel 1
+# default_floating_border normal
+
+# floating_minimum_size 800 x 800
+floating_maximum_size 1200 x 700
+
 bindsym $mod+r mode "resize"
+
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
  bar {
-        status_command i3status
+     strip_workspace_numbers yes
+     colors {
+           background #00000000
+           statusline #ffffff
+           separator #666666
+   
+           focused_workspace  #4c7899 #285577 #ffffff
+           active_workspace   #333333 #5f676a #ffffff
+           inactive_workspace #333333 #222222 #888888
+           urgent_workspace   #2f343a #900000 #ffffff
+           binding_mode       #2f343a #900000 #ffffff
+       }
+      position top
+      mode dock
+      hidden_state hide
+      modifier Mod1
+      status_command i3status
+      i3bar_command i3bar --transparency
  }
