@@ -57,12 +57,11 @@ bindsym $mod+Return exec kitty
 bindsym $mod+Shift+q kill
 
 # Autostart 
-# exec_always --no-startup-id xrandr --output HDMI-1 --mode 3840x2160
-exec_always --no-startup-id xrandr --output HDMI-1 --mode 1920x1080
-# exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-exec --no-startup-id picom
-# exec --no-startup-id feh --bg-scale $HOME/repo/wallpaper/3840x2160/wallhaven-p96odm_3840x2160.png
-exec --no-startup-id feh --bg-scale $HOME/repo/wallpaper/1920×1080/wallhaven-l8vp7y_1920x1080.png
+exec_always --no-startup-id $HOME/.config/i3/adjust_display.sh
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec --no-startup-id fcitx
+exec --no-startup-id picom -f
+bindsym $mod+x exec --no-startup-id $HOME/.config/i3/lock.sh
 
 
 # start dmenu (a program launcher)
@@ -132,16 +131,16 @@ bindsym $mod+a focus parent
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "1:one"
-set $ws2 "2:two"
-set $ws3 "3:three"
-set $ws4 "4:four"
-set $ws5 "5:five"
-set $ws6 "6:six"
-set $ws7 "7:seven"
-set $ws8 "8:eight"
-set $ws9 "9:nine"
-set $ws10 "10:ten"
+set $ws1 "1:One"
+set $ws2 "2:Two"
+set $ws3 "3:Three"
+set $ws4 "4:Four"
+set $ws5 "5:Five"
+set $ws6 "6:Six"
+set $ws7 "7:Seven"
+set $ws8 "8:Eight"
+set $ws9 "9:Nine"
+set $ws10 "10:Ten"
 
 # switch to workspace
 bindsym $mod+1 workspace number $ws1
@@ -199,8 +198,12 @@ mode "resize" {
         bindsym $mod+r mode "default"
 }
 
-default_border pixel 1
+default_border pixel 2
 # default_floating_border normal
+
+gaps inner 3
+gaps outer 2
+
 
 # floating_minimum_size 800 x 800
 floating_maximum_size 1200 x 700
@@ -210,23 +213,23 @@ bindsym $mod+r mode "resize"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
- bar {
-     strip_workspace_numbers yes
-     colors {
-           background #00000000
-           statusline #ffffff
-           separator #666666
-   
-           focused_workspace  #4c7899 #285577 #ffffff
-           active_workspace   #333333 #5f676a #ffffff
-           inactive_workspace #333333 #222222 #888888
-           urgent_workspace   #2f343a #900000 #ffffff
-           binding_mode       #2f343a #900000 #ffffff
-       }
-      position top
-      mode dock
-      hidden_state hide
-      modifier Mod1
-      status_command i3status
-      i3bar_command i3bar --transparency
- }
+ # bar {
+ #     strip_workspace_numbers yes
+ #     colors {
+ #           background #000000
+ #           statusline #ffffff
+ #           separator #666666
+ #
+ #           focused_workspace  #4c7899 #285577 #ffffff
+ #           active_workspace   #333333 #5f676a #ffffff
+ #           inactive_workspace #333333 #222222 #888888
+ #           urgent_workspace   #2f343a #900000 #ffffff
+ #           binding_mode       #2f343a #900000 #ffffff
+ #       }
+ #      position top
+ #      mode dock
+ #      hidden_state hide
+ #      modifier Mod1
+ #      status_command i3status
+ #      i3bar_command i3bar --transparency
+ # }
