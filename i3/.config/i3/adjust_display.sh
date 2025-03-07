@@ -8,10 +8,10 @@ case "$RESOLUTION" in
   # 4K 分辨率，设置 DPI 200%，调整 i3 相关配置
   xrandr --output HDMI-1 --mode 3840x2160
   xrdb -merge <<<"Xft.dpi: 192"
-  export GDK_SCALE=2
-  export GDK_DPI_SCALE=2
-  feh --bg-scale $HOME/repo/wallpaper/3840x2160/wallhaven-p96odm_3840x2160.png
-  # i3-msg "workspace 1; exec kitty --font-size 14"
+  # export GDK_SCALE=2
+  # export GDK_DPI_SCALE=2
+  # export QT_SCALE_FACTOR=2
+  feh --bg-scale $HOME/repo/wallpaper/3840x2160/wallhaven-zye7oj_3840x2160.png
   ;;
 "1920x1080")
   # 1080p 分辨率，设置 DPI 150%
