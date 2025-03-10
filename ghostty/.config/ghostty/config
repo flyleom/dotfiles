@@ -1,6 +1,7 @@
 theme = Dracula
 
 background-opacity = 0.8
+background-blur-radius = 50
 window-height = 35
 window-width = 145
 gtk-titlebar = false

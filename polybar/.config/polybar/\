@@ -174,17 +174,14 @@ type = internal/i3
 ; ws-icon-[0-9]+ = label;icon
 ; NOTE: The label needs to match the name of the i3 workspace
 
-ws-icon-1 = 1;One
-ws-icon-2 = 2;Two
-ws-icon-3 = 3;Three
-ws-icon-4 = 4;Four
-ws-icon-5 = 5;Five
-ws-icon-6 = 6;Six
-ws-icon-7 = 7;Seven
-ws-icon-8 = 8;Eight
-ws-icon-9 = 9;Nine
-ws-icon-0 = 10;Ten
-; ws-icon-default = 
+ws-icon-0 = 1;
+ws-icon-1 = 2;
+ws-icon-2 = 3;
+ws-icon-3 = 4;
+ws-icon-4 = 5;
+ws-icon-5 = 6;
+ws-icon-6 = 7;
+ws-icon-default = 
 ; NOTE: You cannot skip icons, e.g. to get a ws-icon-6
 ; you must also define a ws-icon-5.
 
