@@ -1,3 +1,28 @@
+#!/bin/bash
 # export GTK_IM_MODULE=fcitx
 # export QT_IM_MODULE=fcitx
 # export XMODIFIERS=@im=fcitx
+
+export XDG_DATA_DIRS="$HOME/.local/share/flatpak/exports/share/applications:/var/lib/flatpak/exports/share/applications:$XDG_DATA_DIRS"
+
+RESOLUTION=$(xrandr | grep '*' | awk '{print $1}')
+
+# export XCURSOR_SIZE=48
+
+case "$RESOLUTION" in
+"3840x2160")
+  export QT_SCALE_FACTOR=2
+  export GDK_SCALE=2
+  export GDK_DPI_SCALE=0.5
+  ;;
+"1920x1080")
+  unset QT_SCALE_FACTOR
+  unset GDK_SCALE
+  unset GDK_DPI_SCALE
+  ;;
+*)
+  unset QT_SCALE_FACTOR
+  unset GDK_SCALE
+  unset GDK_DPI_SCALE
+  ;;
+esac

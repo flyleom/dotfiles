@@ -40,3 +40,6 @@ setopt SHARE_HISTORY
 
 export EDITOR=nvim
 export VISUAL=nvim
+
+alias lgi=lazygit
+alias ldo=lazydocker
