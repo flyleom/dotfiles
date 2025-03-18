@@ -38,6 +38,7 @@ setopt HIST_IGNORE_ALL_DUPS
 # 允许多终端共享历史
 setopt SHARE_HISTORY
 
+export LLM_KEY=NONE
 export EDITOR=nvim
 export VISUAL=nvim
 
