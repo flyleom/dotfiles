@@ -42,5 +42,8 @@ export LLM_KEY=NONE
 export EDITOR=nvim
 export VISUAL=nvim
 
+
+# export SQL_EDITOR=nvim
+
 alias lgi=lazygit
 alias ldo=lazydocker
