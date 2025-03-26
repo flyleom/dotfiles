@@ -1,69 +1,42 @@
 {
 	"layer": "top",
-	"modules-left": ["custom/launcher","cpu","memory","tray"],
-	"modules-center": ["hyprland/workspaces"],
-	"modules-right": ["pulseaudio","wireplumber","network","clock"],
+	"modules-left": ["custom/launcher","hyprland/workspaces"],
+	"modules-center": ["clock"],
+	"modules-right": ["pulseaudio","wireplumber","cpu","memory","tray"],
 	
 	"pulseaudio": {
 		"tooltip": false,
 		"scroll-step": 5,
 		"format": "{icon} {volume}%",
 		"format-muted": "{icon} {volume}%",
-		"on-click":"pactl set-sink-mute @DEFAULT_SINK@ toggle",
+		// "on-click":"pactl set-sink-mute @DEFAULT_SINK@ toggle",
 		"format-icons": {
 			"default": ["", "", ""]
 		}
 	},
 
-    "river/tags": {
-		"num-tags": 6
-    },
 
-	// "hyprland/workspaces": {
-	//  "format": "{icon}",
-	//  "format-icons": {
-	//  	"1": "",
-	//  	"2": "",
-	//  	"3": "",
-	//  	"4": "",
-	//  	"5": "",
-	//  	"6": "",
-	//  	"7": "",
-	//  	"8": "",
-	//  	"9": "",
-	//  	"10": "",
-	//  	"active": "",
-	//  	"default": "" 
-	//  },
-	// "persistent-workspaces": {
-	//  "*": [1, 2, 3, 4, 5, 6 ,7,8,9,10]
-	//    }
-	// },
 
   "hyprland/workspaces": {
         "on-click": "activate",
         "format": "{icon}",
         "format-icons": {
-            "default": "",
-            "1": "1",
-            "2": "2",
-            "3": "3",
-            "4": "4",
-            "5": "5",
-            "6": "6",
-            "7": "7",
-            "8": "8",
-            "9": "9",
+            "1": "I",
+            "2": "II",
+            "3": "III",
+            "4": "IV",
+            "5": "V",
+            "6": "VI",
+            "7": "VII",
+            "8": "VIII",
+            "9": "IX",
+            "10": "Ⅹ",
             "active": "󱓻",
-            "urgent": "󱓻"
+            "urgent": ""
         },
-        "persistent_workspaces": {
-            "1": [],
-            "2": [],
-            "3": [],
-            "4": [],
-            "5": []
-        }
+      "persistent-workspaces": {
+             "*": 3, // 5 workspaces by default on every monitor
+       }
     },
 
 
@@ -93,30 +66,39 @@
         "format-alt": "{time} {icon}",
         "format-icons": ["", "", "", "", ""]
     },
+
 	"tray":{
 		"icon-size":18,
 		"spacing": 10
 	},
-    // "clock": {
-    //     "format": "{: %I:%M %p   %d/%m/%Y}"
-    // },
+
 
   "clock": {
-        "tooltip-format": "{calendar}",
-        "format-alt": "  {:%a, %d %b %Y}",
-        "format": "  {:%I:%M %p}"
-    },
+    "format": " {:%A, %B %d, %Y  %R %p }",
+    "format-alt": " {:%a %d-%m-%Y  %I:%M %p}",
+    "tooltip-format": "<tt><small>{calendar}</small></tt>",
+    "calendar": {
+                "mode"          : "year",
+                "mode-mon-col"  : 3,
+                "weeks-pos"     : "right",
+                "on-scroll"     : 1,
+                "format": {
+                          "months":     "<span color='#ffead3'><b>{}</b></span>",
+                          "days":       "<span color='#ecc6d9'><b>{}</b></span>",
+                          "weeks":      "<span color='#99ffdd'><b>W{}</b></span>",
+                          "weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
+                          "today":      "<span color='#ff6699'><b><u>{}</u></b></span>"
+                          }
+                },
+    "actions":  {
+                "on-click-right": "mode",
+                "on-scroll-up": "tz_up",
+                "on-scroll-down": "tz_down",
+                "on-scroll-up": "shift_up",
+                "on-scroll-down": "shift_down"
+                }
+  },
 
-// "clock": {
-//     "format":  "{:%I:%M:%S %p}",
-//     "interval": 1,
-//     "tooltip-format": "\n<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-//     "calendar-weeks-pos": "right",
-//     "today-format": "<span color='#7645AD'><b><u>{}</u></b></span>",
-//     "format-calendar": "<span color='#aeaeae'><b>{}</b></span>",
-//     "format-calendar-weeks": "<span color='#aeaeae'><b>W{:%V}</b></span>",
-//     "format-calendar-weekdays": "<span color='#aeaeae'><b>{}</b></span>"
-//   },
 
     "wireplumber": {
         "format": "{icon}",

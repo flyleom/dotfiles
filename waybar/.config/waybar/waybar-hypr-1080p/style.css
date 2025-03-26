@@ -71,7 +71,7 @@ window#waybar.hidden {
 	margin-left: 8px;
 	padding-left: 10px;
 	padding-right: 10px;
-	margin-bottom: 0px;
+	margin-bottom: 5px;
 	border-radius: 10px;
 	transition: none;
 	color: #161320;
@@ -83,7 +83,7 @@ window#waybar.hidden {
 	margin-left: 8px;
 	padding-left: 10px;
 	padding-right: 10px;
-	margin-bottom: 0px;
+	margin-bottom: 5px;
 	border-radius: 10px;
 	transition: none;
 	color: #1A1826;
@@ -95,7 +95,7 @@ window#waybar.hidden {
 	margin-left: 8px;
 	padding-left: 10px;
 	padding-right: 10px;
-	margin-bottom: 0px;
+	margin-bottom: 5px;
 	border-radius: 10px;
 	transition: none;
 	color: #161320;
@@ -129,7 +129,7 @@ window#waybar.hidden {
 	margin-left: 8px;
 	padding-left: 10px;
 	padding-right: 10px;
-	margin-bottom: 0px;
+	margin-bottom: 5px;
 	border-radius: 10px;
 	transition: none;
 	color: #161320;
@@ -141,7 +141,7 @@ window#waybar.hidden {
 	margin-left: 8px;
 	padding-left: 10px;
 	padding-right: 10px;
-	margin-bottom: 0px;
+	margin-bottom: 5px;
 	border-radius: 10px;
 	transition: none;
 	color: #161320;
@@ -154,8 +154,8 @@ window#waybar.hidden {
 	margin-top: 6px;
 	margin-left: 8px;
 	padding-left: 10px;
-	margin-bottom: 0px;
 	padding-right: 10px;
+	margin-bottom: 5px;
 	border-radius: 10px;
 	transition: none;
 	color: #161320;
@@ -165,7 +165,7 @@ window#waybar.hidden {
 	margin-top: 6px;
 	margin-left: 8px;
 	padding-left: 10px;
-	margin-bottom: 0px;
+	margin-bottom: 5px;
 	padding-right: 10px;
 	border-radius: 10px;
 	transition: none;
@@ -177,7 +177,7 @@ window#waybar.hidden {
 	margin-top: 6px;
 	margin-left: 8px;
 	padding-left: 10px;
-	margin-bottom: 0px;
+	margin-bottom: 5px;
 	padding-right: 10px;
 	border-radius: 10px;
 	transition: none;
@@ -191,6 +191,7 @@ window#waybar.hidden {
 	margin-left: 8px;
 	padding-left: 10px;
 	padding-right: 5px;
+	margin-bottom: 5px;
 	border-radius: 10px;
 	transition: none;
     color: #89DCEB;
