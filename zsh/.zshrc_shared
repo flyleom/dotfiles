@@ -45,7 +45,7 @@ export VISUAL=nvim
 
 # export SQL_EDITOR=nvim
 
-alias vi=nvim
 
 alias lgi=lazygit
 alias ldo=lazydocker
+
