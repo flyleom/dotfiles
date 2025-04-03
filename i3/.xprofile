@@ -8,7 +8,8 @@ case "$RESOLUTION" in
 "3840x2160")
   # 4K 分辨率，设置 DPI 200%，调整 i3 相关配置
   # xrandr --output HDMI-1 --mode 3840x2160
-  xrdb -merge <<<"Xft.dpi: 192"
+  # xrdb -merge <<<"Xft.dpi: 192"
+  xrdb -merge <<<"Xft.dpi: 240"
   ;;
 "1920x1080")
   # 1080p 分辨率，设置 DPI 150%
