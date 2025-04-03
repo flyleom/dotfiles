@@ -58,12 +58,14 @@ bindsym $mod+Return exec --no-startup-id $HOME/.config/kitty/launch.sh
 bindsym $mod+Shift+q kill
 
 # Autostart 
-exec_always --no-startup-id $HOME/.config/i3/adjust_display.sh
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+# exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec_always --no-startup-id $HOME/.config/i3/paper.sh
+
+exec --no-startup-id blueman-applet
+exec --no-startup-id nutstore
 exec --no-startup-id fcitx5
 exec --no-startup-id flameshot
 exec --no-startup-id picom -f
-exec --no-startup-id nm-applet
 
 bindsym $mod+x exec --no-startup-id $HOME/.config/i3/lock.sh
 
@@ -336,26 +338,26 @@ gaps outer 1
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
- # bar {
- #     strip_workspace_numbers yes
- #     colors {
- #           background #000000
- #           statusline #ffffff
- #           separator #666666
- #
- #           focused_workspace  #4c7899 #285577 #ffffff
- #           active_workspace   #333333 #5f676a #ffffff
- #           inactive_workspace #333333 #222222 #888888
- #           urgent_workspace   #2f343a #900000 #ffffff
- #           binding_mode       #2f343a #900000 #ffffff
- #       }
- #      position top
- #      mode dock
- #      hidden_state hide
- #      modifier Mod1
- #      status_command i3status
- #      i3bar_command i3bar --transparency
- # }
+ bar {
+     strip_workspace_numbers yes
+     colors {
+           background #000000
+           statusline #ffffff
+           separator #666666
+
+           focused_workspace  #4c7899 #285577 #ffffff
+           active_workspace   #333333 #5f676a #ffffff
+           inactive_workspace #333333 #222222 #888888
+           urgent_workspace   #2f343a #900000 #ffffff
+           binding_mode       #2f343a #900000 #ffffff
+       }
+      position top
+      mode dock
+      hidden_state hide
+      modifier Mod1
+      status_command i3status
+      i3bar_command i3bar --transparency
+ }
 
 # 窗口的色彩方案
 # set $bgcolor    #523d64
