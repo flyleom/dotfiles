@@ -5,6 +5,12 @@ set_proxy_v2ray() {
   echo "Proxy settings have been set."
 }
 
+set_proxy_v2rayn() {
+  export http_proxy="http://127.0.0.1:10808"
+  export https_proxy="http://127.0.0.1:10808"
+  echo "Proxy settings have been set."
+}
+
 clear_proxy() {
   unset http_proxy
   unset https_proxy
@@ -48,4 +54,14 @@ export VISUAL=nvim
 
 alias lgi=lazygit
 alias ldo=lazydocker
+
+# Snippet
+# zinit snippet https://gist.githubusercontent.com/hightemp/5071909/raw/
+zinit snippet ~/.zinit_snippet
+
+export PATH=$PATH:$HOME/go/bin
+
+# export GOROOT="/usr/lib/go-1.23"
+# export GOPATH=$HOME/go
+# export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 
